@@ -1,0 +1,9 @@
+version: '3'
+services:
+  web:
+    image: httpd:2.4  # Utilizando a imagem oficial do Apache
+    ports:
+      - "8080:80"     # Mapeando a porta 80 do contêiner para a porta 8080 no host
+    volumes:
+      - ./app:/usr/local/apache2/htdocs/  # Mapeando o diretório da aplicação para o Apache
+
